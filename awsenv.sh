@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# awskeys.sh
+# awsenv.sh
 #
 # Marcus Vinicius Fereira            ferreira.mv[ at ].gmail.com
 # 2012-05
