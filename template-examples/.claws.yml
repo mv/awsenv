@@ -1,0 +1,35 @@
+---
+aws:
+  access_key_id: __my_access_key__
+  secret_access_key: __my_secret_key__
+ssh:
+  user: ec2-user
+capistrano:
+  home:
+ec2:
+  fields:
+#   tags:
+#     width: 10
+#     title: tags
+#   public_ip_address:
+#     width: 16
+#     title: Public IP
+    dns_name:
+      width: 50
+      title: DNS Name
+    name:
+      width: 28
+      title: Name
+    status:
+      width: 7
+      title: Status
+#   id:
+#     width: 10
+#     title: ID
+#   private_ip_address:
+#     width: 16
+#     title: Private IP
+    instance_type:
+      width: 9
+      title: Type
+
