@@ -9,6 +9,9 @@ If you, like me, work with more than one Amazon AWS account this script will hel
 you by ajusting your environment variables, from one account to another.
 
 
+Basically, think of RVM.... and you get the idea.
+
+
 ### Install
 
 Copy _**awsenv.sh**_ anywhere in your PATH.
