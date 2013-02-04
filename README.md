@@ -26,6 +26,9 @@ Add to your _**~/.bashrc**_
 If necessary, reopen your terminal to activate it.
 
 
+As an extra, add to your PS1 variable the now available function __*__awsenv_ps1*__
+
+
 ### Setup
 
 First you create a *__profiles__* dir which is a base to hold all your credentials.
