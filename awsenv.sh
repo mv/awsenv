@@ -20,8 +20,8 @@
 
 }
 
-profiles_dir="$AWSENV_PROFILES_DIR"
-template_dir="$AWSENV_TEMPLATE_DIR"
+ profiles_dir="$AWSENV_PROFILES_DIR"
+templates_dir="$AWSENV_TEMPLATES_DIR"
 
 ###
 ### Enforcing...
@@ -107,7 +107,7 @@ function awsenv-generate() {
         return
     fi
 
-    if [ ! -d "${template_dir}" ]
+    if [ ! -d "${templates_dir}" ]
     then
         echo
         echo "Templates dir: DOES NOT exist: [${profile}]"
@@ -139,7 +139,7 @@ function awsenv-generate() {
     echo "Using  Access_Key: [$aws_access_key]"
     echo
 
-    builtin cd "${template_dir}"
+    builtin cd "${templates_dir}"
     for f in `find . -type f `
     do
         file=${f#./*}
