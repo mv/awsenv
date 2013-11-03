@@ -18,8 +18,7 @@ Copy _**awsenv.sh**_ anywhere in your PATH.
 
 Add to your _**~/.bashrc**_
 
-    export  AWSENV_PROFILES_DIR="~/work/awsenv/profiles"
-    export AWSENV_TEMPLATES_DIR="~/work/awsenv/templates" # optional
+    export AWSENV_PROFILES_DIR="~/work/awsenv/profiles"
     source /path/to/awsenv.sh
 
 

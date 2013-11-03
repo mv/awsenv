@@ -21,7 +21,7 @@
 }
 
  profiles_dir="$AWSENV_PROFILES_DIR"
-templates_dir="$AWSENV_TEMPLATES_DIR"
+#emplates_dir="$AWSENV_TEMPLATES_DIR"
 
 
 ###
