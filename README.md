@@ -22,15 +22,18 @@ Add to your _**~/.bashrc**_
     source /path/to/awsenv.sh
 
 
-If necessary, reopen your terminal to activate it.
+Reopen your terminal, or login again to activate it.
 
 
-As an extra, add to your PS1 variable the now available function __*__awsenv_ps1*__
+As an extra, add to your PS1 variable:
+
+    export PS1="\u@h:\w $(__awsenv_ps1)\n\$ "
+
 
 
 ### Setup
 
-First you create a *__profiles__* dir which is a base to hold all your credentials.
+First you create a *__profiles__* dir which is a location to hold all your credentials.
 For each Amazon account you create a second directory which holds at least 3 files:
 
     - aws-credential-file.cfg
@@ -98,7 +101,7 @@ The following variables are manipulated:
     AWS_CREDENTIAL_FILE         # aws: for IAM.
     EC2_CERT                    # aws: for EC2 ami-tools
     EC2_PRIVATE_KEY             # aws: for EC2 ami-tools
-    AWSENV_PROFILE              # mine: basename of your current dir profile
+    AWSENV_PROFILE              # mine: your current dir profile
 
 
 
