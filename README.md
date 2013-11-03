@@ -67,68 +67,13 @@ When done, you will have something like this:
       |    |    +- cert-YYYYY.pem
       |    |    +- pk-YYYYYYY.pem
       ...
-      +- templates/
-           +- .file1.cfg
-           +- .file2.cfg
-      ...
 
 
 ### Using
 
-    $ awsenv-ls                     # list all profiles.
-    $ awsenv-set PROFILE_NAME       # activate PROFILE_NAME, if exists.
-    $ awsenv-generate PROFILE_NAME  # generate configs from templates. See next.
+    $ awsenv-ls                 # list all profiles.
+    $ awsenv-set account1       # activate 'account1' as PROFILE_NAME, if it exists.
 
-
-
-### Using templates
-
-Some tools do not read directly from AWS environment variables. Generally they
-have some local config file with your credentials inside.
-
-In this scenario, if you switch credentials you would probably have to edit each
-file manually to update it. To prevent this a simplistic template approach is
-used.
-
-Inside a *__template__* dir, defined by the variable *__awsenv_template_dir__*
-you can copy each config file to it and edit for your credentials.
-
-After that, you call *__awsenv-generate__* for each account you want:
-
-
-    awsenv-generate  account1
-    awsenv-generate  account2
-
-
-#### Examples:
-
-For [Tim Kay's AWS Perl script](http://timkay.com/aws/):
-
-    # .awssecret
-    __my_access_key__
-    __my_secret_key__
-
-
-
-For [CLAWS - command line AWS](https://github.com/wbailey/claws):
-
-    # .claws.yml
-    ---
-    aws:
-    access_key_id: __my_access_key__
-    secret_access_key: __my_secret_key__
-    ...
-
-
-
-For [s3tools: s3cmd](http://s3tools.org/s3cmd)
-
-    # .s3cfg
-
-    [default]
-    access_key = __my_access_key__
-    secret_key = __my_secret_key__
-    ...
 
 
 ### PS1 prompt
@@ -146,19 +91,13 @@ Try and add to your prompt:
 The following variables are manipulated:
 
 
-    AWS_ACCESS_KEY_ID           # all API's
-    AWS_SECRET_ACCESS_KEY       # all API's
-    AWS_CREDENTIAL_FILE         # for IAM.
-    EC2_CERT                    # for EC2 api-tools and ami-tools
-    EC2_PRIVATE_KEY             # idem, for EC2
-    AWSENV_PROFILE              # is the basename of your current dir profile
+    AWS_ACCESS_KEY_ID           # aws: all API's
+    AWS_SECRET_ACCESS_KEY       # aws: all API's
+    AWS_CREDENTIAL_FILE         # aws: for IAM.
+    EC2_CERT                    # aws: for EC2 ami-tools
+    EC2_PRIVATE_KEY             # aws: for EC2 ami-tools
+    AWSENV_PROFILE              # mine: basename of your current dir profile
 
-
-A local *__'.aws'__* symlink is created in *__~/.aws__*. This symlink points
-to your current profile.
-
-All generated configs, if used, are kept in *__~/.aws__*. The original config
-files are symlinked here.
 
 
 ### Resources
@@ -193,7 +132,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
-    Marcus Vinicius Fereira
-    2012-11
 
