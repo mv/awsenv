@@ -43,7 +43,7 @@ function awsenv-ls() {
     echo
     echo "AWSEnv: Profiles"
     echo "----------------"
-    builtin cd "${profiles_dir}" && find * -type d -prune
+    builtin cd "${profiles_dir}" && find * -type d -o -type l -prune | sort
     echo
 
 }
