@@ -76,8 +76,8 @@ When done, you will have something like this:
 
 ### Using
 
-    $ awsenv-ls                 # list all profiles.
-    $ awsenv-set account1       # activate 'account1' as PROFILE_NAME, if it exists.
+    $ awsenv_ls                 # list all profiles.
+    $ awsenv_set account1       # activate 'account1' as PROFILE_NAME, if it exists.
 
 
 
