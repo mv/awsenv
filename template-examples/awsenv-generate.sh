@@ -5,14 +5,14 @@
 ###
 
 
-function awsenv-generate() {
+function awsenv_generate() {
 
     profile="$1"
 
     if [ -z "${profile}" ]
     then
         echo
-        echo "Usage: awsenv-generate profile"
+        echo "Usage: awsenv_generate profile"
         echo
         return
     fi
