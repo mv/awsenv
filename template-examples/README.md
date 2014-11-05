@@ -28,11 +28,11 @@ used.
 Inside a *__template__* dir, defined by the variable *__awsenv_template_dir__*
 you can copy each config file to it and edit for your credentials.
 
-After that, you call *__awsenv-generate__* for each account you want:
+After that, you call *__awsenv_generate__* for each account you want:
 
 
-    awsenv-generate  account1
-    awsenv-generate  account2
+    awsenv_generate  account1
+    awsenv_generate  account2
 
 
 #### Examples:

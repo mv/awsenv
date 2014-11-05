@@ -38,7 +38,7 @@ function __awsenv_ps1() {
 ### Routines
 ###
 
-function awsenv-ls() {
+function awsenv_ls() {
 
     echo
     echo "AWSEnv: Profiles"
@@ -48,7 +48,7 @@ function awsenv-ls() {
 
 }
 
-function awsenv-set() {
+function awsenv_set() {
 
     profile="$1"
     if [ ! -d "${profiles_dir}/${profile}" ]
