@@ -4,40 +4,6 @@ AWSenv
 AWSenv - A puny little script to enable switching between different AWS API keys
 for different accounts.
 
-## Outdated!
-
-
-### <OBS! OBS! OBS!>
-
-This is outdated. This functionality is now replaced by the new Python based [AWS Command Line Interface](https://aws.amazon.com/cli/).
-
-Using the new cli:
-
-    aws configure --profile profile1
-    aws configure --profile profile2
-    aws configure --profile profile3
-
-
-Add to your ~/.bashrc
-
-
-    function __aws_config() {
-        # add to the prompt:
-        [ "${AWS_DEFAULT_PROFILE}" ] && msg="${AWS_DEFAULT_PROFILE}"
-        [ "${AWS_DEFAULT_REGION}"  ] && msg="${msg}:${AWS_DEFAULT_REGION}"
-        echo "[aws:${msg}]"
-    }
-
-    export DEFAULT_REGION="us-west-2"
-    export DEFAULT_PROFILE="profile1"
-
-    export PS1="\u@h:\w $(__aws_config)\n\$ "
-
-
-
-### </OBS! OBS! OBS!>
-
-## Scenario
 
 If you, like me, work with more than one Amazon AWS account this script will help
 you by ajusting your environment variables, from one account to another.
